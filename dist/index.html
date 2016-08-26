@@ -7,7 +7,9 @@
   </head>
   <body>
     <script>
-      SystemJS.import('./js/MyFancyModule.js').then(function(MyFancyModule) {
+      SystemJS.config({map: {MyFancyModule: 'js/MyFancyModule.js'}});
+
+      SystemJS.import('MyFancyModule').then(function(MyFancyModule) {
         console.log('Module', MyFancyModule);
         var myFancyInstance = new MyFancyModule.MyFancyClass('Test');
         console.log(myFancyInstance.text);
