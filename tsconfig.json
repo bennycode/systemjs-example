@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "moduleResolution": "node",
+    "outFile": "dist/js/MyFancyModule.js",
+    "rootDir": "src/ts",
+    "target": "es5"
+  }
+}

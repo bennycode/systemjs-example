@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "system.js": "0.19.37"
+  },
+  "name": "systemjs-example",
+  "private": true
+}
