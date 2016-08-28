@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <script src="lib/system.js/dist/system.js"></script>
+  </head>
+  <body>
+    <script>
+      SystemJS.import('js/MyFancyModule.js').then(function(MyFancyModule) {
+        console.log('Module', MyFancyModule);
+        var myFancyInstance = new MyFancyModule.MyFancyClass('Test');
+        console.log(myFancyInstance.text);
+      });
+    </script>
+  </body>
+</html>
