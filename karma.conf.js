@@ -9,7 +9,7 @@ module.exports = function(config) {
     files: [
       'dist/lib/system.js/dist/system.js',
       'dist/js/**/*.js',
-      'test/**/*Spec.js'
+      'test/js/**/*Spec.js'
     ],
     frameworks: ['jasmine'],
     logLevel: config.LOG_DEBUG,

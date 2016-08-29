@@ -4,15 +4,10 @@
     <meta charset="UTF-8" />
     <title>Demo</title>
     <script src="lib/system.js/dist/system.js"></script>
+    <script src="js/MyFancyModule.js"></script>
   </head>
   <body>
     <script>
-      SystemJS.config({
-        map: {
-          'MyFancyModule': 'js/MyFancyModule.js'
-        }
-      });
-
       SystemJS.import('MyFancyModule').then(function(MyFancyModule) {
         console.log('Loaded module', MyFancyModule);
         var myFancyInstance = new MyFancyModule.MyFancyClass('Module loaded successfully.');
