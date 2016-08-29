@@ -5,12 +5,12 @@ describe('MyFancyModule', function() {
   beforeAll(function(done) {
     SystemJS.config({
       map: {
-        MyFancyModule: 'base/dist/js/MyFancyModule.js'
+        'MyFancyModule': 'base/dist/js/MyFancyModule.js'
       }
     });
 
     SystemJS.import('MyFancyModule').then(function(module) {
-      console.log('Retrieved: ' + JSON.stringify(module));
+      console.log('Loaded module', module);
       MyFancyModule = module;
       done();
     });
@@ -18,9 +18,10 @@ describe('MyFancyModule', function() {
 
   describe('MyFancyClass', function() {
     it('instantiates a class', function() {
-      var myFancyInstance = new MyFancyModule.MyFancyClass('Test');
+      var text = 'Module loaded successfully.';
+      var myFancyInstance = new MyFancyModule.MyFancyClass(text);
       expect(myFancyInstance).toBeDefined();
-      expect(myFancyInstance.text).toBe('Test');
+      expect(myFancyInstance.text).toBe(text);
     });
   });
 });

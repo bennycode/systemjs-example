@@ -7,12 +7,16 @@
   </head>
   <body>
     <script>
-      SystemJS.config({map: {MyFancyModule: 'js/MyFancyModule.js'}});
+      SystemJS.config({
+        map: {
+          'MyFancyModule': 'js/MyFancyModule.js'
+        }
+      });
 
       SystemJS.import('MyFancyModule').then(function(MyFancyModule) {
-        console.log('Module', MyFancyModule);
-        var myFancyInstance = new MyFancyModule.MyFancyClass('Test');
-        console.log(myFancyInstance.text);
+        console.log('Loaded module', MyFancyModule);
+        var myFancyInstance = new MyFancyModule.MyFancyClass('Module loaded successfully.');
+        document.write(myFancyInstance.text);
       });
     </script>
   </body>
