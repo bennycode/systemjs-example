@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "postinstall": "bower install & tsc",
-    "start": "gulp"
+    "start": "gulp",
+    "test": "karma start"
   }
 }

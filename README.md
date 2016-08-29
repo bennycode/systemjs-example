@@ -1,6 +1,12 @@
 ## Start project
 
-```npm
+```bash
 npm i
 npm start
+```
+
+## Test project
+
+```bash
+npm test
 ```
